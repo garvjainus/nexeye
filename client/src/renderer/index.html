@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexeye - League of Legends AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>⚔️ Nexeye</h1>
+                <p class="tagline">AI-Powered League Analysis</p>
+            </div>
+            <div class="status">
+                <span class="status-indicator" id="statusIndicator">●</span>
+                <span id="statusText">Connecting...</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="card">
+                    <h2>Get Recommendations</h2>
+                    <form id="recommendationForm">
+                        <div class="form-group">
+                            <label for="summonerName">Summoner Name</label>
+                            <input 
+                                type="text" 
+                                id="summonerName" 
+                                placeholder="Enter your summoner name" 
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Region</label>
+                            <select id="region">
+                                <option value="na1">North America</option>
+                                <option value="euw1">Europe West</option>
+                                <option value="eun1">Europe Nordic & East</option>
+                                <option value="kr">Korea</option>
+                                <option value="br1">Brazil</option>
+                                <option value="la1">Latin America North</option>
+                                <option value="la2">Latin America South</option>
+                                <option value="oc1">Oceania</option>
+                                <option value="jp1">Japan</option>
+                            </select>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" id="championBtn" class="btn btn-primary">
+                                Get Champion Recommendation
+                            </button>
+                            <button type="button" id="buildBtn" class="btn btn-secondary">
+                                Get Build Recommendation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="card">
+                    <h2>Results</h2>
+                    <div id="resultsContainer" class="results-container">
+                        <p class="placeholder-text">Enter a summoner name and select a recommendation type to get started.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Nexeye v0.1.0 | Powered by LangGraph & OpenAI</p>
+        </footer>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
+
